@@ -49,12 +49,8 @@ alias cdfish "cd $HOME/.config/fish"
 # utility aliases
 alias sfish "source $HOME/.config/fish/config.fish"
 alias rcp "rsync -rav --progress"
-switch (uname)
-  case Linux
-    alias pbcopy='xclip -selection clipboard'
-    alias pbpaste='xclip -selection clipboard -o'
-  case Darwin
-end
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 function repeat -a char -a length
     printf '%*s\n' $length "" | tr ' ' $char
