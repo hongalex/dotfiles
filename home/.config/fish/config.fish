@@ -31,6 +31,7 @@ alias gs "git status"
 alias gm "git commit -m"
 alias gaa "git add ."
 alias gd "git diff"
+alias gco "git checkout"
 
 # cd aliases
 alias cdproject "cd ~/projects"
