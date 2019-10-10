@@ -46,6 +46,7 @@ alias cdgoc "cd ~/.go/src/cloud.google.com/go/pubsub"
 alias cdpsnode "cd $HOME/projects/client-libraries/nodejs-pubsub"
 alias cdcl "cd $HOME/projects/client-libraries"
 alias cdfish "cd $HOME/.config/fish"
+alias docker-cleanup='docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}'
 
 # utility aliases
 alias sfish "source $HOME/.config/fish/config.fish"
