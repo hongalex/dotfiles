@@ -32,6 +32,7 @@ alias gm "git commit -m"
 alias gaa "git add ."
 alias gd "git diff"
 alias gco "git checkout"
+alias gdt "git tag | xargs -n 1 -I% git tag -d % && git fetch"
 
 # cd aliases
 alias cdproject "cd ~/projects"
