@@ -1,3 +1,17 @@
-*/.vscode/*
-*.test
+# Mac
+.DS_Store
+
+# Keys
+*private_pkcs8
+*.pem
+*.pem.bak
+
+# Text Editors/IDEs 
+**/.vscode/
 **/.idea/*
+
+# Python
+*.pyc
+.classpath
+.factorypath
+
