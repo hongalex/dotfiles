@@ -50,6 +50,9 @@ alias cdfish "cd $HOME/.config/fish"
 alias docker-cleanup='docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}'
 alias cdgproto "cd $HOME/.go/src/google.golang.org/genproto"
 
+# Rust
+set -a PATH $HOME/.cargo/bin
+
 # utility aliases
 alias sfish "source $HOME/.config/fish/config.fish"
 alias rcp "rsync -rav --progress"
