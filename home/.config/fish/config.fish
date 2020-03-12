@@ -1,5 +1,5 @@
 # Path Updates
-set -a PATH $HOME/.local/bin ~/development/flutter/bin
+set -a PATH $HOME/.local/bin ~/development/flutter/bin $HOME/bin
 
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
