@@ -1,6 +1,17 @@
 # Path Updates
 set -a PATH $HOME/.local/bin ~/development/flutter/bin $HOME/bin
 
+# Prepend gnubin to $PATH so GNU sed works
+switch (uname)
+  case Darwin
+    # Prepend gnubin to $PATH so GNU sed works
+    set -gx PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
+    function hb-permissions
+      sudo chown -R (whoami) /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
+      chmod u+w /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
+    end
+end
+
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
 # gcloud sdk
@@ -85,6 +96,7 @@ function !!
         eval $var
     end
 end
+
 
 # load additional dotfiles if they are set up on this computer
 if [ -f $HOME/customizations/fish/config.fish ]; source $HOME/customizations/fish/config.fish; end
