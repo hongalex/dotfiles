@@ -13,6 +13,7 @@ switch (uname)
 end
 
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+source "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
 
 # gcloud sdk
 alias gcpl "gcloud config list project"
