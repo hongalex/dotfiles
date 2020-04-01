@@ -1,3 +1,6 @@
+[include]
+	path=./.gitconfig.identity
+
 [alias]
   aa = add --all
   aliases = !git config --list | grep alias | cut -c 7-
@@ -14,8 +17,21 @@
   pr = !hub pull-request
   root = rev-parse --show-toplevel
   st = status --branch --short
+  tree = log --graph --pretty=oneline --abbrev-commit --decorate
   su = submodule update --init --recursive
   up = !git fetch origin && git rebase origin/master
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
+  # gerrit aliases
+  change = codereview change
+  gofmt = codereview gofmt
+  mail = codereview mail
+  pending = codereview pending
+  rebase-work = codereview rebase-work
+  submit = codereview submit
+  sync = codereview sync
+  prm = push origin HEAD:refs/for/master
+  can = commit --amend --no-edit
 
 [branch]
   autoSetupMerge = always
@@ -33,44 +49,9 @@
   changed = yellow  # Items that have been changed, but not added to the index
   untracked = red   # Items that are untracked
 
-[commit]
-  template = ~/.gitmessage
-  gpgsign = true
-
-[core]
-  editor = atom --wait
-  excludesfile = ~/.gitignore
-  autocrlf = input
-  pager = diff-so-fancy | less --tabs=4 -RFX
-
-[credential]
-  helper = osxkeychain
-
-[fetch]
-  prune = true
-
-[filter "lfs"]
-  clean = git lfs clean %f
-  smudge = git lfs smudge %f
-  required = true
-
-[github]
-  user = lee-dohm
-
-[hub]
-  protocol = https
-
-[include]
-  path = ~/.gitconfig.identity
-
-[merge]
-  ff = true
-
-[push]
-  default = current
-
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
+
