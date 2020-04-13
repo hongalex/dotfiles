@@ -59,8 +59,11 @@ alias cdgoc "cd ~/.go/src/cloud.google.com/go/pubsub"
 alias cdpsnode "cd $HOME/projects/client-libraries/nodejs-pubsub"
 alias cdcl "cd $HOME/projects/client-libraries"
 alias cdfish "cd $HOME/.config/fish"
-alias docker-cleanup='docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}'
 alias cdgproto "cd $HOME/.go/src/google.golang.org/genproto"
+
+# misc aliases
+alias docker-cleanup='docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}'
+alias ls "ls -lah"
 
 # Rust
 set -a PATH $HOME/.cargo/bin
