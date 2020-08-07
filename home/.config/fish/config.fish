@@ -12,8 +12,15 @@ switch (uname)
     end
 end
 
+# load additional dotfiles if they are set up on this computer
+if [ -f $HOME/customizations/fish/config.fish ]; source $HOME/customizations/fish/config.fish; end
+
+# load homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
+
+# load direnv
+eval (direnv hook fish)
 
 # gcloud sdk
 alias gcpl "gcloud config list project"
@@ -63,10 +70,15 @@ alias cdgproto "cd $HOME/.go/src/google.golang.org/genproto"
 
 # misc aliases
 alias docker-cleanup='docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}'
-alias ls "ls -lah"
 
 # Rust
 set -a PATH $HOME/.cargo/bin
+
+# Java
+export M2_HOME=/usr/local/Cellar/maven/3.6.3_1/libexec
+export M2=$M2_HOME/bin
+set -a PATH $M2_HOME/bin
+set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
 
 # utility aliases
 alias sfish "source $HOME/.config/fish/config.fish"
@@ -101,6 +113,19 @@ function !!
     end
 end
 
+# MOTD
+function echo_color
+	set -l color "$1"
+	printf "$2\n"
+end
 
-# load additional dotfiles if they are set up on this computer
-if [ -f $HOME/customizations/fish/config.fish ]; source $HOME/customizations/fish/config.fish; end
+echo_color "\033[0;90m" "c-f  Move forward"
+echo_color "\033[0;90m" "c-b  Move backward"
+echo_color "\033[0;90m" "c-p  Move up"
+echo_color "\033[0;90m" "c-n  Move down"
+echo_color "\033[0;90m" "c-a  Jump to beginning of line"
+echo_color "\033[0;90m" "c-e  Jump to end of line"
+echo_color "\033[0;90m" "c-d  Delete forward"
+echo_color "\033[0;90m" "c-h  Delete backward"
+echo_color "\033[0;90m" "c-k  Delete forward to end of line"
+echo_color "\033[0;90m" "c-u  Delete entire line"
