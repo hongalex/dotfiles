@@ -9,6 +9,7 @@
 # Text Editors/IDEs 
 **/.vscode/
 **/.idea/*
+**/*code-workspace
 
 # Python
 *.pyc

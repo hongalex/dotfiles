@@ -1,6 +1,9 @@
 [include]
 	path=./.gitconfig.identity
 
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
 [alias]
   aa = add --all
   aliases = !git config --list | grep alias | cut -c 7-
@@ -55,3 +58,5 @@
   newNormal = green bold
   newHighlight = green bold 22
 
+[pull]
+	rebase = false

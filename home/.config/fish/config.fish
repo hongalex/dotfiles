@@ -113,19 +113,18 @@ function !!
     end
 end
 
-# MOTD
-function echo_color
-	set -l color "$1"
-	printf "$2\n"
+function ls --description 'List contents of directory'
+    command ls -Ga $argv
 end
 
-echo_color "\033[0;90m" "c-f  Move forward"
-echo_color "\033[0;90m" "c-b  Move backward"
-echo_color "\033[0;90m" "c-p  Move up"
-echo_color "\033[0;90m" "c-n  Move down"
-echo_color "\033[0;90m" "c-a  Jump to beginning of line"
-echo_color "\033[0;90m" "c-e  Jump to end of line"
-echo_color "\033[0;90m" "c-d  Delete forward"
-echo_color "\033[0;90m" "c-h  Delete backward"
-echo_color "\033[0;90m" "c-k  Delete forward to end of line"
-echo_color "\033[0;90m" "c-u  Delete entire line"
+
+printf "%sc-f  Move forward\n" (set_color red) 
+printf "%sc-b  Move backward\n"
+printf "%sc-p  Move up\n"
+printf "%sc-n  Move down\n"
+printf "%sc-a  Jump to beginning of line\n"
+printf "%sc-e  Jump to end of line\n"
+printf "%sc-d  Delete forward\n"
+printf "%sc-h  Delete backward\n"
+printf "%sc-k  Delete forward to end of line\n"
+printf "%sc-u  Delete entire line\n"
