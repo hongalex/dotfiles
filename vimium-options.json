@@ -1,0 +1,114 @@
+{
+  "settingsVersion": "1.66",
+  "exclusionRules": [
+    {
+      "pattern": "https?://mail.google.com/*",
+      "passKeys": "?jkxercgils#uld/`"
+    },
+    {
+      "pattern": "https?://projectstream.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://projectstream.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://app.roll20.net/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://keyboardchecker.com/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://keyboardchecker.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.rabb.it/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://www.rabb.it/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://s2.boardgame-online.com/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://www.keyboardtester.com/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://config.qmk.fm/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://www.onlinepianist.com/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://www.onlinepianist.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://config.qmk.fm/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://dj3d.io/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://dj3d.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://docs.google.com/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://musiclab.chromeexperiments.com/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://remotedesktop.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://remotedesktop.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.netflix.com/*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "about:blank*",
+      "passKeys": "*"
+    },
+    {
+      "pattern": "https?://www.youtube.com/*",
+      "passKeys": "?kjl,.<>cowftim"
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "# Insert your preferred key mappings here.\nmap <c-m> toggleMuteTab",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\n# More examples.\n#\n# (Vimium supports search completion Wikipedia, as\n# above, and for these.)\n\ngoogle.com: https://google.com/search?q=%s&ie=UTF-8\nbing.com: https://www.bing.com/search?q=%s&PC=U316&FORM=CHROMN\nfacebook.com: https://www.facebook.com/search/top/?q=%s&opensearch=1\nmaps.google.com: https://www.google.com/maps/search/%s?hl=en&source=opensearch\nalert.uw.edu: https://emergency.uw.edu/?s=%s\nyelp.com: https://www.yelp.com/search?find_desc=%s&src=opensearch\ntranslate.google.com: https://translate.google.com/?source=osdd#auto|auto|%s\ncloud.google.com: https://cloud.google.com/s/results?q=%s\nyandex.com: https://yandex.com/search/?text=%s&from=os&clid=1836588\ngithub.com: https://github.com/search?q=%s&ref=opensearch\nairbnb.com: https://www.airbnb.com/search?location=%s\ncamelcamelcamel.com: http://camelcamelcamel.com/search?utm_campaign=osd&utm_source=chrome&utm_medium=www&q=%s\nr: https://reddit.com/r/%s\nchampion.gg: http://champion.gg/champion/%s\nopenwrt.org: https://openwrt.org/doku.php?do=search&id=%s\ngfycat.com: https://gfycat.com/gifs/search/%s\nreddit.com: https://www.reddit.com/search?q=%s&utm_source=opensearch\ntwitter.com: https://twitter.com/search?q=%s\nstackexchange.com: http://stackexchange.com/search?q=%s\nredis.io: http://redis.io/commands/%s\ngaming.youtube.com: https://gaming.youtube.com/results?search_query=%s\nlowes.com: https://www.lowes.com/search?searchTerm=%s\nmedium.com: https://medium.com/search?q=%s&ref=opensearch\nbooking.com: https://www.booking.com/searchresults.en-us.html?si=ai%2Cco%2Cci%2Cre%2Cdi;ss=%s;label=opensearch-plugin\nnamecheap.com: http://www.namecheap.com/domains/domain-name-search/results.aspx?domain=%s&utm_source=opensearch\nap.www.namecheap.com: http://www.namecheap.com/domains/domain-name-search/results.aspx?domain=%s&utm_source=opensearch\nviewdns.info: https://viewdns.info/chinesefirewall/?domain=%s\nepochconverter.com: https://www.epochconverter.com/?source=searchbar&q=%s\ndrive.google.com: https://drive.google.com/drive/search?q=%s\nebags.com: https://www.ebags.com/search?term=%s&pl=hdr_srch_sf_l1\noce.op.gg: https://oce.op.gg/summoner/?userName=%s\nweather.codes: https://weather.codes/search/?q=%s\nthepiratebay.org: https://www.thepiratebay.org/s/?q=%s&page=0&orderby=99\nsmile.amazon.com: https://smile.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=%s\npirateproxy.wtf: https://unblockpirate.uk/search.php?q=%s&page=0&orderby=99\nunblockpirate.uk: https://unblockpirate.uk/search.php?q=%s&page=0&orderby=99\nthepìratebay.com: https://xn--thepratebay-fcb.com/proxy/go.php?q=%s&page=0&orderby=99\nthepiratebay3.org: https://thepiratebay3.org/index.php?q=%s\nbandwidth.com: https://www.bandwidth.com/?s=%s\nscholar.google.com: https://scholar.google.com/scholar?hl=en&as_sdt=0%2C48&q=%s&btnG=\nebates.com: https://www.rakuten.com/search/all.htm?query=&position=submit&type=suggest&store_name=%s\nskytraxratings.com: https://skytraxratings.com/?s=%s\ngodaddy.com: https://www.godaddy.com/domainsearch/find?checkAvail=1&tmskey=&domainToCheck=%s\ndrive: https://drive.google.com/drive/search?q=%s\nusps: https://tools.usps.com/go/TrackConfirmAction?tLabels=%s\ngolang.tw: https://www.facebook.com/search/top/?q=%s&opensearch=1\ncommunity.letsencrypt.org: https://community.letsencrypt.org/search?q=%s\ntwitch.tv: https://www.twitch.tv/search?term=%s\ncrunchyroll.co: https://www.crunchyroll.com/search?from=&q=%s\namazon.co.jp: https://www.amazon.co.jp/s/ref=nb_sb_noss_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=%s\ngodoc.org: https://godoc.org/?q=%s\nkrew.dev: https://github.com/search?q=%s&ref=opensearch\nbestbuy.com: https://www.bestbuy.com/site/searchpage.jsp?st=%s&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys\nxiapi.xiapibuy.com: https://shopee.tw/search/?keyword=%s\nsslforfree.com: https://www.sslforfree.com/create?domains=%s\ndevelopers.nest.com: https://developers.nest.com/s/results?q=%s\nfiverr.com: https://www.fiverr.com/search/gigs?query=%s&search_in=everywhere&source=opensearch\ncommunity.cloudflare.com: https://community.cloudflare.com/search?q=%s\ndealmoon.com: https://www.dealmoon.com/cn/search?lang=cn&q=%s\nhumblebundle.com: http://www.humblebundle.com/store/search?search=%s&hmb_source=opensearch&hmb_medium=opensearch&hmb_campaign=opensearch\nswagbucks.com_: http://www.swagbucks.com/?f=55&q=%s\nwiki: https://en.wikipedia.org/wiki/%s\nswagbucks.com: http://www.swagbucks.com/?f=55&q=%s\nrakuten.com: https://www.rakuten.com/search/all.htm?query=&position=submit&type=suggest&store_name=%s\ntheregister.co.uk: https://search.theregister.co.uk/?q=%s&page=&source=osd\necosia.org: https://www.ecosia.org/search?q=%s&addon=opensearch\nduckduckgo.com: https://duckduckgo.com/?q=%s&atb=v152-2__\nebay.com: https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR12.TRC2.A0.H0.Xviolin+.TRS0&_nkw=%s&_sacat=0\ngm: https://mail.google.com/mail/u/0/#search/%s\nslickdeals.net: http://slickdeals.net/newsearch.php?firstonly=1&q=%s\nmusic.youtube.com: https://music.youtube.com/search?q=%s&utm_source=opensearch\nslickdeals.net_: http://slickdeals.net/newsearch.php?firstonly=1&q=%s\naram: https://www.murderbridge.com/champion/%s\nwyze.com: https://wyze.com/catalogsearch/result/?q=%s\narchive.org_: https://archive.org/searchresults.php?search=%s&sin=&limit=100&start=0&searchAll=yes&submit=this+was+submitted\nhacs.xyz: https://hacs.xyz/search?q=%s\nseattle.craigslist.org: https://seattle.craigslist.org/search/?sort=rel&ordinal=1&ratio=0&clicked=0&query=%s&catAbb=\narchive.is: http://archive.is/search/?q=%s\nof: https://offerup.com/search/?q=%s\nqfc.com: https://www.qfc.com/search?query=%s&from=opensearch\ndune.fandom.com: https://dune.fandom.com/wiki/Special:Search?search=%s\nyoutube.com: https://www.youtube.com/results?search_query=%s&page=&utm_source=opensearch\nstackoverflow.com: http://stackoverflow.com/search?q=%s\noffer: https://offerup.com/search/?q=%s\ndoctorofcredit.com: https://www.doctorofcredit.com/?s=%s\nkroger.com: https://www.kroger.com/search?query=%s&from=opensearch\nmusescore.org: https://musescore.org/search/site?keys=%s\netsy.com: https://www.etsy.com/search?ref=tab_search&q=%s\ncashbackmonitor.com: https://www.cashbackmonitor.com/search.php?q=%s\ncustomerservice.costco.com: https://customerservice.costco.com/app/answers/list/kw/%s\nmyanimelist.net: https://myanimelist.net/anime.php?q=%s\nplay.google.com: https://play.google.com/store/search?q=%s&utm_source=opensearch\nscryfall.com: https://scryfall.com/search?q=%s\nscry: https://scryfall.com/search?q=%s\nnewegg.com: https://www.newegg.com/p/pl?d=%s\nwhois: https://whois.domaintools.com/go/?q=%s&service=whois\ngo.skimresources.com: https://www.twitch.tv/search?term=%s\nbbb: https://www.bbb.org/search?find_country=USA&find_latlng=47.623831%2C-122.318369&find_loc=Capitol%20Hill%2C%20WA&find_text=%s&page=1&sort=Relevance\ngo.skimresources.com_: https://www.rakuten.com/search/%s/\namazon.com: https://smile.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=%s\nrei.com: https://www.rei.com/search?q=%s\nnetlify.com: https://www.netlify.com/?search=%s\npodcasts.google.com: https://podcasts.google.com/search/%s\narchive.org: https://archive.org/searchresults.php?search=%s&sin=&limit=100&start=0&searchAll=yes&submit=this+was+submitted\narchive.org__: https://archive.org/searchresults.php?search=%s&sin=&limit=100&start=0&searchAll=yes&submit=this+was+submitted\nchocolatey.org: https://chocolatey.org/packages?q=%s\nsch: https://www.schwabfunds.com/products/%s\nm: https://www.google.com/maps?q=%s GoogleMaps\na: https://www.amazon.com/s/?field-keywords=%s Amazon",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
