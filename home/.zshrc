@@ -1,18 +1,29 @@
 export TERM="xterm-256color"
 
-# If you come from bash you might have to change your $PATH.
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=/usr/lib/go/bin:$PATH
-export PATH=$PATH:/mnt/c/Windows/System32
-export PATH=$PATH:/mnt/c/Users/Alex/AppData/Local/Programs/Microsoft\ VS\ Code/bin
 
 # Flutter
 export PATH=$PATH:$HOME/development/flutter/bin
 
-# gcloud sdk
-if [[ -f '/Users/hongalex/google-cloud-sdk/path.fish.inc' ]]; then
-	. '/Users/hongalex/google-cloud-sdk/path.zsh.inc';
-fi
+case `uname` in
+  Linux)
+		export PATH=$PATH:/mnt/c/Windows/System32
+		export PATH=$PATH:/mnt/c/Users/Alex/AppData/Local/Programs/Microsoft\ VS\ Code/bin
+	;;
+  Darwin)
+		# gcloud sdk
+		if [[ -f '/Users/hongalex/google-cloud-sdk/path.fish.inc' ]]; then
+			. '/Users/hongalex/google-cloud-sdk/path.zsh.inc';
+		fi
+
+		export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+		function hb-permissions() {
+			sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
+			chmod u+w /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
+		}
+;;
+esac
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -65,12 +76,9 @@ else
   export EDITOR='code'
 fi
 
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
+# Go development
+export GOPATH=$HOME/.go
+export PATH=/usr/lib/go/bin:$PATH
 
 # Git aliases
 alias gpush="git push"
@@ -83,15 +91,15 @@ alias gco="git checkout"
 alias gdt="git tag | xargs -n 1 -I% git tag -d % && git fetch"
 
 # cd aliases
-alias cdproject="cd ~/projects"
+alias cdproject="cd $HOME/projects"
 alias cdproj="cdproject"
-alias cdnode="cd ~/projects/samples/nodejs-docs-samples"
-alias cdpython="cd ~/projects/samples/python-docs-samples"
-alias cdalpha="cd ~/projects/alphav2"
-alias cdcred="cd ~/customizations/credentials"
-alias cdgo="cd ~/.go/src"
-alias cdgos="cd ~/.go/src/github.com/GoogleCloudPlatform/golang-samples/pubsub"
-alias cdgoc="cd ~/.go/src/cloud.google.com/go/pubsub"
+alias cdnode="cd $HOME/projects/samples/nodejs-docs-samples"
+alias cdpython="cd $HOME/projects/samples/python-docs-samples"
+alias cdalpha="cd $HOME/projects/alphav2"
+alias cdcred="cd $HOME/customizations/credentials"
+alias cdgo="cd $HOME/.go/src"
+alias cdgos="cd $HOME/.go/src/github.com/GoogleCloudPlatform/golang-samples/pubsub"
+alias cdgoc="cd $HOME/.go/src/cloud.google.com/go/pubsub"
 alias cdpsnode="cd $HOME/projects/client-libraries/nodejs-pubsub"
 alias cdcl="cd $HOME/projects/client-libraries"
 alias cdfish="cd $HOME/.config/fish"
@@ -109,33 +117,32 @@ alias rcp="rsync -rav --progress"
 alias gcpl="gcloud config list project"
 alias gcl="gcloud config list"
 function gcsp() {
-		gcloud config set project $argv
-		export GCLOUD_PROJECT=$argv
-		export GOOGLE_CLOUD_PROJECT=$argv
-		export GOLANG_SAMPLES_PROJECT_ID=$argv
+	gcloud config set project $argv
+	export GCLOUD_PROJECT=$argv
+	export GOOGLE_CLOUD_PROJECT=$argv
+	export GOLANG_SAMPLES_PROJECT_ID=$argv
 }
 
 function repeat() {
-		str=$1
-		num=$2
-		v=$(printf "%-${num}s" "$str")
-		echo "${v// /*}"
+	str=$1
+	num=$2
+	v=$(printf "%-${num}s" "$str")
+	echo "${v// /*}"
 }
 
 function printcloud() {
-		repeat "_" 95
-    printf "|%-40s | %-50s|\n" "KEY" "VALUE"
+	repeat "_" 95
+	printf "|%-40s | %-50s|\n" "KEY" "VALUE"
 
-    printf "|%-40s | %-50s|\n" "GOOGLE_APPLICATION_CREDENTIALS" $GOOGLE_APPLICATION_CREDENTIALS
-    printf "|%-40s | %-50s|\n" "GOOGLE_CLOUD_PROJECT" $GOOGLE_CLOUD_PROJECT
-    printf "|%-40s | %-50s|\n" "GCLOUD_PROJECT" $GCLOUD_PROJECT
-    gcl
+	printf "|%-40s | %-50s|\n" "GOOGLE_APPLICATION_CREDENTIALS" $GOOGLE_APPLICATION_CREDENTIALS
+	printf "|%-40s | %-50s|\n" "GOOGLE_CLOUD_PROJECT" $GOOGLE_CLOUD_PROJECT
+	printf "|%-40s | %-50s|\n" "GCLOUD_PROJECT" $GCLOUD_PROJECT
+	gcl
 }
 
-GOPATH=$HOME/go
 function _update_ps1() {
-	    PS1="$($GOPATH/bin/powerline-go -error $?)"
-    }
+	PS1="$($GOPATH/bin/powerline-go -error $?)"
+}
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
 	    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
