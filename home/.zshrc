@@ -5,25 +5,35 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 # Flutter
 export PATH=$PATH:$HOME/development/flutter/bin
 
-case `uname` in
-  Linux)
-		export PATH=$PATH:/mnt/c/Windows/System32
-		export PATH=$PATH:/mnt/c/Users/Alex/AppData/Local/Programs/Microsoft\ VS\ Code/bin
-	;;
-  Darwin)
-		# gcloud sdk
-		if [[ -f '/Users/hongalex/google-cloud-sdk/path.fish.inc' ]]; then
-			. '/Users/hongalex/google-cloud-sdk/path.zsh.inc';
-		fi
+windows='*Microsoft*'
+linux='*Linux*'
+mac='*Darwin*'
+case `uname -a` in
+$~windows)
+	export PATH=$PATH:/mnt/c/Windows/System32
+	export PATH=$PATH:/mnt/c/Users/Alex/AppData/Local/Programs/Microsoft\ VS\ Code/bin
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+;;
+$~darwin)
+  # gcloud sdk
+  if [[ -f '/Users/hongalex/google-cloud-sdk/path.fish.inc' ]]; then
+    . '/Users/hongalex/google-cloud-sdk/path.zsh.inc';
+  fi
 
-		export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-		function hb-permissions() {
-			sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
-			chmod u+w /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
-		}
+  export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+  function hb-permissions() {
+    sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
+    chmod u+w /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
+  }
+;;
+$~linux)
+  echo "Hello Linux"
+;;
+*)
+  echo "Unsupported operating system"
+  echo $(uname -a)
 ;;
 esac
-
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -35,6 +45,7 @@ fi
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # How often to auto-update (in days).
 export UPDATE_ZSH_DAYS=13
@@ -59,7 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-dircolors-solarized)
 
 export ZSH_DISABLE_COMPFIX="true"
 
@@ -144,7 +155,7 @@ function _update_ps1() {
 	PS1="$($GOPATH/bin/powerline-go -error $?)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-	    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
 ZSH_DISABLE_COMPFIX="true"
