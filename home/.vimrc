@@ -1,4 +1,4 @@
-syntax enable           " enable syntax processing
+" syntax enable           " enable syntax processing
 
 "	UI Config
 set number              " show line numbers
@@ -19,9 +19,9 @@ set smartindent
 " softtabstop:      Fine tunes the amount of white space to be added
 " shiftwidth        Determines the amount of whitespace to add in normal mode
 " expandtab:        When on uses space instead of tabs
-set tabstop     =4
-set softtabstop =4
-set shiftwidth  =4
+set tabstop     =2
+set softtabstop =2
+set shiftwidth  =2
 set expandtab
 
 " show tabs
@@ -45,5 +45,4 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
 
