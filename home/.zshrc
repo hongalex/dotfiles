@@ -27,6 +27,7 @@ esac
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 # load additional dotfiles if they are set up on this computer
 if [[ -f $HOME/customizations/google.zsh ]];
@@ -77,6 +78,8 @@ else
 fi
 
 # Go development
+# Ignore zsh autocorrect for go commands (e.g. ./...)
+alias go="nocorrect go"
 export GOPATH=$HOME/.go
 export PATH=/usr/lib/go/bin:$PATH
 
