@@ -16,7 +16,6 @@ $~windows)
 
   # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
   ZSH_THEME="powerlevel9k/powerlevel9k"
-  POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
   POWERLEVEL9K_MODE='nerdfont-complete'
 ;;
 $~mac)
@@ -43,6 +42,9 @@ esac
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # load additional dotfiles if they are set up on this computer
 if [[ -f $HOME/customizations/google.zsh ]];
@@ -86,7 +88,7 @@ export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='code'
+  export EDITOR='vim'
 fi
 
 # Go development
