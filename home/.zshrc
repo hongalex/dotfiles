@@ -13,10 +13,16 @@ $~windows)
 	export PATH=$PATH:/mnt/c/Windows/System32
 	export PATH=$PATH:/mnt/c/Users/Alex/AppData/Local/Programs/Microsoft\ VS\ Code/bin
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+  # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+  ZSH_THEME="powerlevel9k/powerlevel9k"
+  POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+  POWERLEVEL9K_MODE='nerdfont-complete'
 ;;
-$~darwin)
+$~mac)
+  ZSH_THEME="powerlevel9k/powerlevel9k"
   # gcloud sdk
-  if [[ -f '/Users/hongalex/google-cloud-sdk/path.fish.inc' ]]; then
+  if [[ -f '/Users/hongalex/google-cloud-sdk/path.zsh.inc' ]]; then
     . '/Users/hongalex/google-cloud-sdk/path.zsh.inc';
   fi
 
@@ -37,16 +43,11 @@ esac
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 # load additional dotfiles if they are set up on this computer
 if [[ -f $HOME/customizations/google.zsh ]];
 	then source $HOME/customizations/google.zsh
 fi
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='nerdfont-complete'
 
 # How often to auto-update (in days).
 export UPDATE_ZSH_DAYS=13
@@ -116,7 +117,6 @@ alias cdgos="cd $HOME/.go/src/github.com/GoogleCloudPlatform/golang-samples/pubs
 alias cdgoc="cd $HOME/.go/src/cloud.google.com/go/pubsub"
 alias cdpsnode="cd $HOME/projects/client-libraries/nodejs-pubsub"
 alias cdcl="cd $HOME/projects/client-libraries"
-alias cdfish="cd $HOME/.config/fish"
 alias cdgproto="cd $HOME/.go/src/google.golang.org/genproto"
 
 # misc aliases
