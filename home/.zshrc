@@ -74,7 +74,7 @@ COMPLETION_WAITING_DOTS="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git zsh-autosuggestions zsh-dircolors-solarized)
+plugins=(git zsh-autosuggestions zsh-dircolors-solarized zsh-vim-mode)
 
 export ZSH_DISABLE_COMPFIX="true"
 
