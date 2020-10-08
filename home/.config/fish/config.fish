@@ -19,9 +19,6 @@ if [ -f $HOME/customizations/fish/config.fish ]; source $HOME/customizations/fis
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
 
-# load direnv
-eval (direnv hook fish)
-
 # gcloud sdk
 alias gcpl "gcloud config list project"
 alias gcl "gcloud config list"

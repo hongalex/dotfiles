@@ -33,6 +33,7 @@ $~mac)
 ;;
 $~linux)
   echo "Hello Linux"
+  ZSH_THEME="powerlevel10k/powerlevel10k"
 ;;
 *)
   echo "Unsupported operating system"
