@@ -65,7 +65,7 @@ export UPDATE_ZSH_DAYS=13
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -94,9 +94,9 @@ fi
 
 # Go development
 # Ignore zsh autocorrect for go commands (e.g. ./...)
-alias go="nocorrect go"
+# alias go="nocorrect go"
 export GOPATH=$HOME/.go
-export PATH=/usr/lib/go/bin:$PATH
+export PATH=$PATH:/usr/lib/go/bin
 
 # Git aliases
 alias gpush="git push"
@@ -129,6 +129,7 @@ alias docker-cleanup="docker ps -a -q | xargs -I {} docker rm {} ; docker images
 alias sz="source $HOME/.zshrc"
 alias zshconfig="vim ~/.zshrc"
 alias rcp="rsync -rav --progress"
+alias hs="homeshick"
 
 # gcloud sdk
 alias gcpl="gcloud config list project"
