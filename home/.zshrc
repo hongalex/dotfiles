@@ -172,3 +172,4 @@ source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 prompt_context() {}
 
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
