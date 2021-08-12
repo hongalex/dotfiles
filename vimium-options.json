@@ -6,14 +6,6 @@
       "passKeys": "?jkxercgils#uld/`"
     },
     {
-      "pattern": "https?://projectstream.google.com/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://projectstream.google.com/*",
-      "passKeys": ""
-    },
-    {
       "pattern": "https?://app.roll20.net/*",
       "passKeys": ""
     },
@@ -26,60 +18,12 @@
       "passKeys": ""
     },
     {
-      "pattern": "https?://www.rabb.it/*",
-      "passKeys": "*"
-    },
-    {
-      "pattern": "https?://www.rabb.it/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://s2.boardgame-online.com/*",
-      "passKeys": "*"
-    },
-    {
       "pattern": "https?://www.keyboardtester.com/*",
       "passKeys": "*"
     },
     {
       "pattern": "https?://config.qmk.fm/*",
       "passKeys": "*"
-    },
-    {
-      "pattern": "https?://www.onlinepianist.com/*",
-      "passKeys": "*"
-    },
-    {
-      "pattern": "https?://www.onlinepianist.com/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://config.qmk.fm/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://dj3d.io/*",
-      "passKeys": "*"
-    },
-    {
-      "pattern": "https?://dj3d.io/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://docs.google.com/*",
-      "passKeys": "*"
-    },
-    {
-      "pattern": "https?://musiclab.chromeexperiments.com/*",
-      "passKeys": "*"
-    },
-    {
-      "pattern": "https?://remotedesktop.google.com/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://remotedesktop.google.com/*",
-      "passKeys": ""
     },
     {
       "pattern": "https?://www.netflix.com/*",
