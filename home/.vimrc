@@ -1,4 +1,4 @@
-" syntax enable           " enable syntax processing
+syntax enable           " enable syntax processing
 
 "	UI Config
 set number              " show line numbers
@@ -45,4 +45,8 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
 
