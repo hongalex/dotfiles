@@ -133,6 +133,7 @@ alias rcp="rsync -rav --progress"
 alias hs="homeshick"
 
 # gcloud sdk
+export PATH=$PATH:/usr/local/share/google-cloud-sdk/bin
 alias gcpl="gcloud config list project"
 alias gcl="gcloud config list"
 function gcsp() {
@@ -179,3 +180,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
   export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
