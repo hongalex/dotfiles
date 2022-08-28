@@ -15,11 +15,11 @@ $~windows)
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
   # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-  ZSH_THEME="powerlevel9k/powerlevel9k"
+  ZSH_THEME="powerlevel10k/powerlevel10k"
   POWERLEVEL9K_MODE='nerdfont-complete'
 ;;
 $~mac)
-  ZSH_THEME="powerlevel9k/powerlevel9k"
+  ZSH_THEME="powerlevel10k/powerlevel10k"
   # gcloud sdk
   if [[ -f '/Users/hongalex/google-cloud-sdk/path.zsh.inc' ]]; then
     . '/Users/hongalex/google-cloud-sdk/path.zsh.inc';
