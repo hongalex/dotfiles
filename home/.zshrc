@@ -30,6 +30,7 @@ $~mac)
     sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
     chmod u+w /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
   }
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 ;;
 $~linux)
   echo "Hello Linux"
