@@ -94,9 +94,6 @@ else
 fi
 
 # Go development
-# Ignore zsh autocorrect for go commands (e.g. ./...)
-# alias go="nocorrect go"
-export GOPATH=$HOME/.go
 export PATH=$PATH:/usr/lib/go/bin
 
 # Git aliases
@@ -110,19 +107,14 @@ alias gco="git checkout"
 alias gdt="git tag | xargs -n 1 -I% git tag -d % && git fetch"
 
 # cd aliases
-alias cdproject="cd $HOME/projects"
-alias cdproj="cdproject"
-alias cdnode="cd $HOME/projects/samples/nodejs-docs-samples"
-alias cdpython="cd $HOME/projects/samples/python-docs-samples"
-alias cdalpha="cd $HOME/projects/alphav2"
-alias cdcred="cd $HOME/customizations/credentials"
-alias cdgo="cd $HOME/.go/src"
-alias cdgos="cd $HOME/projects/samples/golang-samples"
-alias cdgoc="cd $HOME/.go/src/cloud.google.com/go/pubsub"
-alias cdpsnode="cd $HOME/projects/client-libraries/nodejs-pubsub"
-alias cdcl="cd $HOME/projects/client-libraries"
-alias cdgproto="cd $HOME/.go/src/google.golang.org/genproto"
-alias cdgop="cd $HOME/code/google-cloud-go/pubsub"
+export CODE=$HOME/code
+alias cdcode="cd $CODE"
+alias cdnode="cd $CODE/cloud/nodejs-docs-samples"
+alias cdpython="cd $CODE/cloud/python-docs-samples"
+alias cdgos="cd $CODE/cloud/golang-samples"
+alias cdgop="cd $CODE/cloud/google-cloud-go/pubsub"
+alias cdgoc="cd $CODE/cloud/google-cloud-go/pubsub"
+alias cdgopl="cd $CODE/cloud/google-cloud-go/pubsublite"
 
 # misc aliases
 alias docker-cleanup="docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}"
