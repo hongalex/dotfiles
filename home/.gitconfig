@@ -68,4 +68,4 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [user]
-	email = “9397363+hongalex@users.noreply.github.com”
+	email = 9397363+hongalex@users.noreply.github.com
