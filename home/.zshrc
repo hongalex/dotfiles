@@ -32,8 +32,8 @@ $~mac)
   }
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
-  export PATH=/opt/apache-maven-3.6.3/bin:$PATH
-  export M2_HOME="/opt/apache-maven-3.6.3"
+  export PATH=/opt/apache-maven-3.8.6/bin:$PATH
+  export M2_HOME="/opt/apache-maven-3.8.6"
 ;;
 $~linux)
   echo "Hello Linux"
