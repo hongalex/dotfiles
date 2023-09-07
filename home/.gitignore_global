@@ -1,10 +1,14 @@
 # Mac
 .DS_Store
 
+# Go
+go.work.sum
+
 # Keys
 *private_pkcs8
 *.pem
 *.pem.bak
+*credentials.json
 
 # Text Editors/IDEs 
 **/.vscode/
