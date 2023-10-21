@@ -121,6 +121,7 @@ alias cdgopl="cd $CODE/cloud/google-cloud-go/pubsublite"
 
 # misc aliases
 alias docker-cleanup="docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}"
+alias python=python3
 
 # utility aliases
 alias sz="source $HOME/.zshrc"
