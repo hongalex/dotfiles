@@ -112,12 +112,8 @@ alias gdt="git tag | xargs -n 1 -I% git tag -d % && git fetch"
 # cd aliases
 export CODE=$HOME/code
 alias cdcode="cd $CODE"
-alias cdnode="cd $CODE/cloud/nodejs-docs-samples"
-alias cdpython="cd $CODE/cloud/python-docs-samples"
-alias cdgos="cd $CODE/cloud/golang-samples"
-alias cdgop="cd $CODE/cloud/google-cloud-go/pubsub"
-alias cdgoc="cd $CODE/cloud/google-cloud-go/pubsub"
-alias cdgopl="cd $CODE/cloud/google-cloud-go/pubsublite"
+alias cdgos="cd $CODE/cloud/golang-samples/pubsub"
+alias cdgoc="cd $CODE/cloud/google-cloud-go/pubsub/v2"
 
 # misc aliases
 alias docker-cleanup="docker ps -a -q | xargs -I {} docker rm {} ; docker images -q -f dangling=true | xargs -I {} docker rmi -f {}; docker volume ls -qf dangling=true | xargs -I {} docker volume rm {}"
@@ -181,3 +177,4 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

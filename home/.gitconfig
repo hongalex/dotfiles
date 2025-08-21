@@ -73,3 +73,5 @@
 [core]
   excludesfile = ~/.gitignore_global
 
+[http]
+	cookiefile = /Users/hongalex/.gitcookies
