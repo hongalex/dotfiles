@@ -52,7 +52,7 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # load additional dotfiles if they are set up on this computer
-if [[ -f $HOME/customizations/google.zsh ]];
+if [[ -f $HOME/config/google.zsh ]];
 	then source $HOME/customizations/google.zsh
 fi
 
@@ -179,3 +179,6 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Setup go/hi #!>>HI<<!#
+source /etc/bash.bashrc.d/shell_history_forwarder.sh #!>>HI<<!#
