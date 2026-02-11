@@ -26,6 +26,7 @@ $~mac)
   fi
 
   export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+  export PATH=/bin/go:$PATH
   function hb-permissions() {
     sudo chown -R $(whoami) /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
     chmod u+w /usr/local/bin /usr/local/etc /usr/local/sbin /usr/local/share /usr/local/share/doc
@@ -53,7 +54,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # load additional dotfiles if they are set up on this computer
 if [[ -f $HOME/config/google.zsh ]];
-	then source $HOME/customizations/google.zsh
+	then source $HOME/config/google.zsh
 fi
 
 # How often to auto-update (in days).
@@ -79,7 +80,7 @@ COMPLETION_WAITING_DOTS="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git zsh-autosuggestions zsh-dircolors-solarized)
+plugins=(git zsh-autosuggestions zsh-dircolors-solarized zsh-syntax-highlighting)
 
 export ZSH_DISABLE_COMPFIX="true"
 
@@ -180,5 +181,13 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Setup go/hi #!>>HI<<!#
-source /etc/bash.bashrc.d/shell_history_forwarder.sh #!>>HI<<!#
+alias ls="ls --color"
+alias la="ls --color -la"
+alias less="less -R"
+
+bindkey '^[[3~' delete-char           # enables DEL key proper behaviour
+bindkey '^[^[[C' forward-word         # [Ctrl-RightArrow] - move forward one word
+bindkey '^[^[[D' backward-word        # [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[H' beginning-of-line      # [Home] - goes at the begining of the line
+bindkey '^[[F' end-of-line            # [End] - goes at the end of the line
+
