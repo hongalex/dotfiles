@@ -46,6 +46,24 @@ $~mac)
 $~linux)
   echo "Hello Linux"
   ZSH_THEME="powerlevel10k/powerlevel10k"
+
+  # make sure to run the following commands before
+  # Create a local bin directory if you don't have one
+  # mkdir -p ~/.local/bin
+
+  # Download the osc52.sh script
+  # curl -sSLo ~/.local/bin/osc52.sh \
+  #https://raw.githubusercontent.com/chromium/hterm/main/etc/osc52.sh
+
+  # Make it executable
+  # chmod +x ~/.local/bin/osc52.sh
+
+  if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+    export PATH="$HOME/.local/bin:$PATH" # Apply immediately
+  fi
+
+  alias remote-pbcopy='osc52.sh'
 ;;
 *)
   echo "Unsupported operating system"
