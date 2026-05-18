@@ -7,7 +7,7 @@
 *.pem.bak
 *credentials.json
 
-# Text Editors/IDEs 
+# Text Editors/IDEs
 **/.vscode/
 **/.idea/*
 **/*code-workspace
@@ -19,3 +19,6 @@
 
 # direnv
 .envrc
+
+# Jetski
+.jetski/*
